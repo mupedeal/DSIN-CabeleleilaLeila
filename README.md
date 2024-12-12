@@ -9,6 +9,7 @@ Para rodar o projeto:
 - Execute a migration com o comando Update-Database usando o projeto CabeleleilaLeilaInfra como referência;
 - O id do cliente está fixo no código para testes, então copie um Id gerado no momento da migration para a variável CabeleleilaLeilaClienteApi > Controllers > AgendamentoController > _clienteId;
 - Execute ambos os projetos (CabeleleilaLeilaClienteApi e CabeleleilaLeilaCliente) ao mesmo tempo.
+- Execute preferencialmente no Visual Studio ou Rider.
 
 * O projeto é apresentado no estado em que se encontra no momento do envio, estando por finalizar.
 
