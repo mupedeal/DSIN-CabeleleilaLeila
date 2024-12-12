@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{09505D52-4D32-40C1-AC5D-22845595EF1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{BCF20078-20DF-4EE3-8296-A32B622667DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabeleleilaLeilaCliente", "CabeleleilaLeilaCliente\CabeleleilaLeilaCliente.csproj", "{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabeleleilaLeilaClienteApi", "CabeleleilaLeilaClienteApi\CabeleleilaLeilaClienteApi.csproj", "{874BB6C9-28A3-40E3-BF52-7C6E689360E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{977874D3-47D5-476A-B8C7-B9843245DC00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabeleleilaLeilaDomain", "CabeleleilaLeilaDomain\CabeleleilaLeilaDomain.csproj", "{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabeleleilaLeilaInfra", "CabeleleilaLeilaInfra\CabeleleilaLeilaInfra.csproj", "{666E6633-65BB-42A9-A123-55A6082860C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabeleleilaLeilaClienteDto", "CabeleleilaLeilaClienteDto\CabeleleilaLeilaClienteDto.csproj", "{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874BB6C9-28A3-40E3-BF52-7C6E689360E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874BB6C9-28A3-40E3-BF52-7C6E689360E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874BB6C9-28A3-40E3-BF52-7C6E689360E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874BB6C9-28A3-40E3-BF52-7C6E689360E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{666E6633-65BB-42A9-A123-55A6082860C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666E6633-65BB-42A9-A123-55A6082860C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666E6633-65BB-42A9-A123-55A6082860C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666E6633-65BB-42A9-A123-55A6082860C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D9E2AA4-FE69-40AA-85AA-81441BF8E96C} = {09505D52-4D32-40C1-AC5D-22845595EF1C}
+		{874BB6C9-28A3-40E3-BF52-7C6E689360E5} = {BCF20078-20DF-4EE3-8296-A32B622667DE}
+		{EAF4D92A-D2A5-407D-B3EB-9AA4E2FF60C9} = {977874D3-47D5-476A-B8C7-B9843245DC00}
+		{666E6633-65BB-42A9-A123-55A6082860C6} = {977874D3-47D5-476A-B8C7-B9843245DC00}
+		{DCB72E4C-C0A6-4CDF-8076-6E5FD19A1F21} = {977874D3-47D5-476A-B8C7-B9843245DC00}
+	EndGlobalSection
+EndGlobal

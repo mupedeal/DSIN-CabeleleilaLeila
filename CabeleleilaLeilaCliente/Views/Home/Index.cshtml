@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Boas-vindas";
+    Layout = "_SignoutLayout";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+}
+
+<div class="home-content mx-auto py-5">
+    <div class="text-center mb-5">
+        <h1 class="home-titulo">Cabeleleila Leila</h1>
+    </div>
+
+    <div class="card gap-3 p-3 home-actions">
+        <button type="button" class="btn btn-primary" id="btnAgendar">Agendar</button>
+        <button class="btn btn-primary loader-agendar" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="visually-hidden">Carregando...</span>
+        </button>
+        <button type="button" class="btn btn-primary" id="btnEntrar">Entrar</button>
+    </div>
+
+    <form>
+        <div class="card agendamento-step-01">
+            <div class="gap-3 p-3 d-grid">
+                <h4 class="home-step-title">Selecione os serviços:</h4>
+                <div id="listaServicos">
+                </div>
+                <button type="button" class="btn btn-primary" id="btnConfirmarServicos">Avançar</button>
+                <button type="button" class="btn btn-secondary login-btn-voltar">Voltar</button>
+            </div>
+        </div>
+
+        <div class="card agendamento-step-02">
+            <div class="gap-3 p-3 d-grid">
+                <h4 class="home-step-title">Selecione o melhor dia:</h4>
+                <div>
+                    <label for="dataHoraAgendamento">Data e Hora</label>
+                    <input type="datetime-local" class="form-control" id="dataHoraAgendamento" name="dataHora" value="@DateTime.Now.ToString("s")" min="@DateTime.Now.ToString("s")" max="@DateTime.Now.AddMonths(6).ToString("s")" step="1800" />
+                </div>
+                <button type="button" class="btn btn-primary" id="btnConfirmarDataHora">Confirmar dia e hora</button>
+                <button type="button" class="btn btn-primary" id="btnVoltarServicos">Alterar serviços</button>
+                <button type="button" class="btn btn-secondary login-btn-voltar">Voltar ao início</button>
+            </div>
+        </div>
+
+        <div class="card agendamento-step-03">
+            <div class="gap-3 p-3 d-grid">
+                <h4 class="home-step-title">Identifique-se:</h4>
+                <div>
+                    <label for="clienteCpfAgendamento" class="form-label">CPF</label>
+                    <input type="text" class="form-control cpf" id="clienteCpfAgendamento" placeholder="000.000.000-00" required>
+                </div>
+                <div class="agendamento-step-03-compl">
+                    <div class="d-grid gap-2">
+                        <div class="alert alert-info" role="alert" style="margin-bottom: 0;">
+                            <small>Percebi que você é um novo cliente. Por favor, me diga seu nome e informações de contato abaixo:</small>
+                        </div>
+                        <div>
+                            <label for="clienteNomeAgendamento" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="clienteNomeAgendamento" placeholder="Seu nome completo" required>
+                        </div>
+                        <div>
+                            <label for="clienteCelularAgendamento" class="form-label">Celular</label>
+                            <input type="text" class="form-control fone" id="clienteCelularAgendamento" placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label for="clienteEmailAgendamento" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="clienteEmailAgendamento" placeholder="Seu e-mail">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnConfirmarCadastro">Avançar</button>
+                <button class="btn btn-primary loader-confirmar-cadastro" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Carregando...</span>
+                </button>
+                <button type="button" class="btn btn-primary" id="btnVoltarDataHora">Alterar dia ou hora</button>
+                <button type="button" class="btn btn-secondary login-btn-voltar">Voltar ao início</button>
+            </div>
+        </div>
+
+        <div class="card gap-3 p-3 agendamento-step-04">
+            <h4 class="home-step-title">Confirmação:</h4>
+        </div>
+    </form>
+
+    <form>
+        <div class="card login-step-01">
+            <div class="gap-3 p-3 d-grid">
+                <h4 class="home-step-title">Identifique-se:</h4>
+                <div>
+                    <label for="clienteCpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control cpf" id="clienteCpf" placeholder="000.000.000-00" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnEnviarCodigo">Enviar código</button>
+                <button class="btn btn-primary loader-enviar-codigo" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Carregando...</span>
+                </button>
+                <button type="button" class="btn btn-secondary login-btn-voltar">Voltar</button>
+            </div>
+        </div>
+
+        <div class="card login-step-02">
+            <div class="gap-3 p-3 d-grid">
+                <h4 class="home-step-title">Insira o código enviado:</h4>
+                <small class="text-muted">Você receberá o código no celular cadastrado. Caso tenha cadastrado apenas e-mail, você receberá por lá tá?</small>
+                <div>
+                    <label for="clienteCodigoUsoUnico" class="form-label">Código</label>
+                    <input type="text" class="form-control codigo-uso-unico" id="clienteCodigoUsoUnico" placeholder="000000" required minlength="6" maxlength="6">
+                </div>
+                <button type="button" class="btn btn-primary" id="btnEntrarCodigo">Entrar com código</button>
+                <button class="btn btn-primary loader-entrar-codigo" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Carregando...</span>
+                </button>
+                <button type="button" class="btn btn-secondary login-btn-voltar">Voltar ao início</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/home.js" asp-append-version="true"></script>
+}

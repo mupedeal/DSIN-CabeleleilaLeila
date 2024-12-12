@@ -1,0 +1,15 @@
+﻿.home-content {
+    max-width: 750px;
+}
+
+.home-titulo {
+    font-weight: 1000;
+}
+
+.agendamento-step-01, .agendamento-step-02, .agendamento-step-03, .agendamento-step-04, .login-step-01, .login-step-02, .loader-enviar-codigo, .loader-entrar-codigo, .loader-agendar, .agendamento-step-03-compl, .loader-confirmar-cadastro {
+    display: none;
+}
+
+.home-step-title {
+    font-weight: bolder;
+}
