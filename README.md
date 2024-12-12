@@ -2,7 +2,13 @@
 
 Esta solução é uma proposta de solução ao desafio proposto pela DSIN Tecnologia da Informação, visando uma vaga no Setor de Desenvolvimento.
 
-Este projeto foi desenvolvido em .NET 8, e utiliza tecnologia JWT para proteção da API, contando um projeto MVC exclusivo de front-end. A persistência fica por conta de banco de dados SQL, através do ORM Entity Framework Core.
+Este projeto foi desenvolvido em .NET 8, e utiliza tecnologia JWT para proteção da API, contando com um projeto MVC exclusivo de front-end. A persistência fica por conta de banco de dados SQL Server, através do ORM Entity Framework Core.
+
+Para rodar o projeto:
+- Atualize a connection string do banco de dados em CabeleleilaLeilaInfra > Configuration.cs > GetConnectionString();
+- Execute a migration com o comando Update-Database usando o projeto CabeleleilaLeilaInfra como referência;
+- O id do cliente está fixo no código para testes, então copie um Id gerado no momento da migration para a variável CabeleleilaLeilaClienteApi > Controllers > AgendamentoController > _clienteId;
+- Execute ambos os projetos (CabeleleilaLeilaClienteApi e CabeleleilaLeilaCliente) ao mesmo tempo.
 
 * O projeto é apresentado no estado em que se encontra no momento do envio, estando por finalizar.
 
